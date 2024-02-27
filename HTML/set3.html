@@ -1,15 +1,93 @@
-<!-- Qs1. Recreate the following table using HTML : -->
+<!-- Qs1. Create the following table using HTML : -->
 
-<!-- Qs2. Recreate the following form using HTML :
+<table border="">
+    <caption>Student Information</caption>
+    <tr>
+        <th rowspan="6">Info</th>
+        <th rowspan="2">Name</th>
+        <th colspan="2">Address</th>
+    </tr>
+    <tr>
+        <th>City</th>
+        <th>House</th>
+    </tr>
+    <tr>
 
-Hint - Use the following :
-- Text Input for Name
-- Radio Button for Sex
-- Give Options : India, Nepal, USA, Canada for Country
-- Text Area for Message
-- Checkbox for Subscribe
-- Submit Button -->
+        <td>A</td>
+        <td>Delhi</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>B</td>
+        <td>Mumbai</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>C</td>
+        <td>Kolkata</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>D</td>
+        <td>Pune</td>
+        <td>4</td>
+    </tr>
+</table>
 
-<!-- Qs3. Recreate the following form using HTML : -->
 
+<br>
+<hr>
+<!-- Qs2. Create the following form using HTML :-->
 
+<form action="">
+    Name:<input type="text" id="n">
+    <br>
+    <br>
+    Sex: <input type="radio" value="m">Male <input type="radio" value="f">Female
+    <br>
+    <br>
+    Country:
+    <select name="" id="">
+        <option value="" selected>Select an option</option>
+        <option value="in">India</option>
+        <option value="us">United Stated</option>
+        <option value="uk">United Kingdom</option>
+        <option value="ru">Russia</option>
+    </select>
+    <br>
+    <br>
+    Message:
+    <br><textarea name="" id=""></textarea>
+    <br>
+    <br>
+    <input type="checkbox">Subscribe?
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+
+<br>
+<hr>
+<!-- Qs3. Create the following form for feedback using HTML : -->
+
+<h3>Feedback Form</h3>
+Name: <input type="text" placeholder="Write your name">
+<br>
+<br>
+Email: <input type="email" placeholder="Write your email">
+<br>
+<br>
+Message:
+<br>
+<textarea name="" id=""></textarea>
+<br>
+<br>
+Rate us our of 5:
+<br>
+<input type="radio" value="1" name="rating">1 <br>
+<input type="radio" value="2" name="rating">2 <br>
+<input type="radio" value="3" name="rating">3 <br>
+<input type="radio" value="4" name="rating">4 <br>
+<input type="radio" value="5" name="rating">5 <br>
+<br>
+<button type="submit">Send your message!</button>
