@@ -1,0 +1,66 @@
+/* Qs1. Re-create the following layout using flexbox as closely as possible : 
+- Take the container height & width as 400px & child height & width as 100px.
+- Font size of text as 50px. */
+
+#alpabets {
+    margin: auto;
+    height: 400px;
+    width: 400px;
+    border: solid 3px green;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    border: solid 3px black;
+    border-radius: 20px;
+    font-size: 50px;
+    text-align: center;
+    background-color: gray;
+}
+
+
+/* Qs2. Re-create the following layout using flexbox as closely as possible :
+- Take the container height & width as(50px, 900px) & child height & width as (50px, 80px).
+- Use font-size as 24px */
+
+#navbar {
+    height: 50px;
+    width: 900px;
+    border: solid 2px green;
+    border-radius: 20px;
+    background-color: pink;
+    display: flex;
+
+}
+
+.navchild {
+    padding: 5px;
+    height: 50px;
+    width: 80px;
+    font-size: 24px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
