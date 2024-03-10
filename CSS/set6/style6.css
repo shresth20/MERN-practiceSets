@@ -3,15 +3,80 @@
 - Give a gap of 10px between each row and column
 - Set the sizing of individual boxes as shown in the image */
 
+#container_1 {
+    background-color: pink;
+    display: grid;
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+}
 
+.items {
+    border: solid black;
+}
 
+#head {
+    grid-column: 1/span 12;
+}
 
+#side {
+    grid-row: 2 /span 10;
+    grid-column: 1 /span 3;
+}
+
+#nav {
+    grid-column: 4 /span 6;
+}
+
+#main {
+    grid-row: 3 /span 9;
+    grid-column: 4 /span 6;
+}
+
+#ads {
+    grid-row: 2 /span 10;
+    grid-column: 10 /span 3;
+}
+
+#foot {
+    grid-column: 1 /span 12;
+}
 
 
 /* Qs2. Use Media Queries to change the above layout the given one when the viewport width goes below 720px. */
 
+@media(max-width:720px) {
 
+    #head {
+        grid-column: 1/span 12;
+    }
 
+    #nav {
+        grid-row: 2;
+        grid-column: 1 /span 12;
+    }
+
+    #side {
+        grid-row: 3 /span 9;
+        grid-column: 1 /span 3;
+    }
+
+    #main {
+        grid-row: 3 /span 9;
+        grid-column: 4 /span 9;
+    }
+
+    #ads {
+        grid-row: 12;
+        grid-column: 1 /span 3;
+    }
+
+    #foot {
+        grid-row: 0 /span 1;
+        grid-column: 4 /span 9;
+    }
+
+}
 
 
 /* Qs3. Try to complete this code to create a web page loader using CSS animations. */
@@ -28,9 +93,27 @@
 @keyframes spin {
     0% {
         /* Set rotation to 0 degrees */
+        transform: rotate(0deg);
+    }
+
+    20% {
+        border-top: 16px solid red;
+    }
+
+    40% {
+        border-top: 16px solid yellow;
+    }
+
+    60% {
+        border-top: 16px solid green;
+    }
+
+    80% {
+        border-top: 16px solid blue;
     }
 
     100% {
         /* Set rotation to 360 degrees */
+        transform: rotate(360deg);
     }
 }
