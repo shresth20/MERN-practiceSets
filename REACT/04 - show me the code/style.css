@@ -12,14 +12,31 @@ body {
 }
 
 #layout {
-    margin: 2px;
+    margin: 0px;
 }
 
 #header {
-    border: 2px solid black;
+    margin-bottom: 10px;
+    border: solid black;
+    width: 100%;
+
 }
 
-#searchBar >input {
+#footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border: solid black;
+    width: 100%;
+    height: 50px;
+}
+
+#footer>a {
+    margin: 0px 10px;
+}
+
+#searchBar>input {
     border: solid black;
 }
 
@@ -42,10 +59,11 @@ body {
 #logo>ul>li {
     padding: 0px 20px 10px;
     list-style-type: none;
-    font-size:large;
+    font-size: large;
 }
 
 a {
+    color: inherit;
     text-decoration: none;
 }
 
@@ -59,17 +77,19 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 150px;
-    height: 200px;
+    width: 180px;
+    height: 250px;
     margin: 5px;
-    border: solid black;
     border-radius: 10px;
+}
 
+#card:hover {
+    border: solid black;
 }
 
 #cardImg>img {
-    width: 150px;
-    height: 100px;
+    width: 180px;
+    height: 130px;
     border-radius: 8px;
 
 }
