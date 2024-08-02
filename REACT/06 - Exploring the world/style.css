@@ -68,8 +68,13 @@ a {
 }
 
 .filter {
+    display: flex;
+    justify-content: center;
     text-align: center;
     margin: 10px;
+}
+.top-btn{
+    margin-left: 20px;
 }
 
 .cards {
@@ -81,6 +86,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f0f0f0;
     width: 180px;
     height: 230px;
     margin: 5px;
@@ -91,9 +97,27 @@ a {
     border: solid black;
 }
 
+.card-img{
+    width: 180px;
+    height: 130px;  
+}
+
 #cardImg>img {
     width: 180px;
     height: 130px;
     border-radius: 8px;
 
+}
+
+.shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-card {
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    width: 180px;
+    height: 230px;
+    margin: 5px;
 }

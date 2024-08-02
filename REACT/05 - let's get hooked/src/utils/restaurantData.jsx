@@ -1,3 +1,4 @@
+// Zomato restaurant data
 export const restaurantList = [
   {
     type: "restaurant",

@@ -6,16 +6,22 @@ const Body = (props) => {
   const [List, setList] = useState(restaurantList);
   return (
     <div id="body">
-      <button
-        onClick={() => {  
-          setList(List.filter((res) => parseInt(res.info.rating.rating_text) > 4));
-        }}
-      >
-        Filter Top rated Restaurants
-      </button>
-      {restaurantList.map((res) => (
-        <Card resData={res} key={res.info.resId} />
-      ))}
+      <div className="filter">
+        <button
+          onClick={() => {
+            setList(
+              List.filter((res) => Number(res.info.rating.rating_text) > 4)
+            );
+          }}
+        >
+          Top rated Restaurants
+        </button>
+      </div>
+      <div className="cards">
+        {List.map((res) => (
+          <Card resData={res} key={res.info.resId} />
+        ))}
+      </div>
     </div>
   );
 };
