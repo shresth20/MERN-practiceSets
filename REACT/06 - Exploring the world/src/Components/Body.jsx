@@ -17,7 +17,7 @@ export const Search = () => {
 };
 
 const Body = () => {
-  console.log("Body rendered");
+  // console.log("Body rendered");
   const [list, setList] = useState([]);
   const [filterRes, setFilterRes] = useState([]);
   const [searchText, setSearchText] = useState("");

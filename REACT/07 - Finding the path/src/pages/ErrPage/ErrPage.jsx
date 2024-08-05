@@ -3,7 +3,7 @@ import { useRouteError } from "react-router-dom";
 import './ErrPage.css'
 export const ErrPage = () => {
   const err = useRouteError();
-  console.log(err);
+  // console.log(err);
   return (
     <div className="err-page">
       <h1>{err.status} : {err.statusText}</h1>

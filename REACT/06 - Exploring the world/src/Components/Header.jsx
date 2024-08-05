@@ -15,7 +15,6 @@ const LogBtn = () => {
   );
 };
 
-// const HeadOption = (name, url) => <a href={url}>{name}</a>;
 
 const Options = () => (
   <ul>

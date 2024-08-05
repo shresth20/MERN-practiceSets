@@ -1,23 +1,34 @@
-import React, { useState, useEffect } from "react";
-import { Card } from "./Card";
-import "../../style.css";
-import { Shimmer } from "./Shimmer";
-export const Search = () => {
-  const [searchText, setSearchText] = useState("");
-  return (
-    <div id="serachBar">
-      <input
-        placeholder="Search food"
-        value={searchText}
-        onChange={(e) => setSearchText(e.target.value)}
-      ></input>
-      <button>Search</button>
-    </div>
-  );
-};
+import React from "react";
 
-const Body = () => {
-  console.log("Body rendered");
+// export const Home = () => {
+//   return (
+//     <>
+//       <Body />
+//     </>
+//   );
+// };
+
+import React, { useState, useEffect } from "react";
+import { Card } from "../../Components/Card";
+import { Shimmer } from "../../Components/Shimmer";
+import { Link } from "react-router-dom";
+import { HOME_API } from "../../utils/constants";
+
+// export const Search = () => {
+//   const [searchText, setSearchText] = useState("");
+//   return (
+//     <div id="serachBar">
+//       <input
+//         placeholder="Search food"
+//         value={searchText}
+//         onChange={(e) => setSearchText(e.target.value)}
+//       ></input>
+//       <button>Search</button>
+//     </div>
+//   );
+// };
+
+export const Home = () => {
   const [list, setList] = useState([]);
   const [filterRes, setFilterRes] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -30,9 +41,7 @@ const Body = () => {
     // Bypass the CORS
     // const url = 'https://corsproxy.io/?' + encodeURIComponent('https://www.swiggy.com/mapi/homepage/getCards?lat=28.7040592&lng=77.10249019999999');
 
-    const api = await fetch(
-      "https://www.swiggy.com/mapi/homepage/getCards?lat=28.7040592&lng=77.10249019999999"
-    );
+    const api = await fetch(HOME_API);
 
     // optional chainning
     const Json = await api.json();
@@ -80,17 +89,17 @@ const Body = () => {
             setFilterRes(list.filter((res) => Number(res.info.avgRating) > 4));
           }}
         >
-          Top rated Restaurants
+          Top Rated Restaurants
         </button>
       </div>
 
       <div className="cards">
         {filterRes.map((res) => (
-          <Card {...res.info} key={res.info.id} />
+          <Link key={res.info.id} to={"/restaurant/" + res.info.id}>
+            <Card {...res.info} />
+          </Link>
         ))}
       </div>
     </div>
   );
 };
-
-export default Body;
